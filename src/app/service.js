@@ -55,7 +55,7 @@ const BeautySalonAPI = {
 
   // СУЩНОСТЬ АККАУНТОВ С ВНЕШНИМ КЛЮЧОМ staff_id
   accounts: [
-    { id: 1, email: "anna.stylist@salon.by", password: "hashed_password_123", staff_id: 1 },
+    { id: 1, email: "1@1.1", password: "1", staff_id: 1 },
     { id: 2, email: "daria.nails@salon.by", password: "hashed_password_456", staff_id: 2 },
     { id: 3, email: "elena.brows@salon.by", password: "hashed_password_789", staff_id: 3 },
     { id: 4, email: "ivan.massage@salon.by", password: "hashed_password_abc", staff_id: 4 },

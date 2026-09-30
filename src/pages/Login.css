@@ -1,0 +1,94 @@
+/* src/pages/Login.css */
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  padding-top: 50px; /* Отступ сверху, чтобы форма не прижималась к шапке */
+  min-height: 80vh;
+  font-family: sans-serif;
+  background-color: #ffffff;
+}
+
+.login-card {
+  width: 320px;
+  padding: 20px;
+}
+
+.login-title {
+  font-size: 36px;
+  font-weight: bold;
+  margin: 0 0 10px 0;
+  color: #333;
+}
+
+.login-subtitle {
+  font-size: 15px;
+  color: #666;
+  margin: 0 0 40px 0;
+}
+
+.login-input-group {
+  margin-bottom: 25px;
+}
+
+.login-input-group-large {
+  margin-bottom: 45px;
+}
+
+.login-input {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  padding: 10px 0;
+  font-size: 16px;
+  outline: none;
+  color: #333;
+}
+
+.login-error {
+  color: #dc3545;
+  font-size: 14px;
+  margin: -30px 0 30px 0;
+}
+
+.login-btn-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 60px;
+}
+
+.login-btn {
+  background: transparent;
+  border: 2px solid #b82a5c; /* Тонкая малиновая рамка */
+  color: #b82a5c;
+  padding: 10px 45px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.login-btn:hover {
+  background-color: #b82a5c;
+  color: #ffffff;
+}
+
+.login-footer {
+  text-align: center;
+  font-size: 14px;
+  color: #666;
+  border-top: 1px solid #f1f1f1;
+  padding-top: 20px;
+}
+
+.login-link {
+  color: #b82a5c;
+  cursor: pointer;
+}
+
+
+.login-success {
+  color: #28a745;
+  font-size: 14px;
+  margin: -30px 0 30px 0;
+}

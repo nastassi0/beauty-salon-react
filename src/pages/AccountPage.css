@@ -1,0 +1,61 @@
+/* src/pages/AccountPage.css */
+
+.account-container {
+  display: flex;
+  justify-content: center;
+  /* Убрали alignItems: center; */
+  padding-top: 40px;       /* Добавили отступ сверху от шапки */
+  min-height: 70vh;
+  font-family: sans-serif;
+}
+
+.account-card {
+  width: 400px;
+  padding: 30px;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  background-color: #fff;
+}
+
+.account-title {
+  font-size: 24px;
+  color: #333;
+  margin: 0 0 25px 0;
+  border-bottom: 2px solid #b82a5c;
+  padding-bottom: 10px;
+}
+
+.account-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.account-label {
+  font-size: 13px;
+  color: #888;
+  display: block;
+  margin-bottom: 2px;
+}
+
+.account-value {
+  font-size: 16px;
+  color: #333;
+}
+
+.account-value-bold {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+.account-badge {
+  font-size: 14px;
+  padding: 4px 10px;
+  background-color: #f8d7da;
+  color: #b82a5c;
+  border-radius: 4px;
+  font-weight: 500;
+  display: inline-block;
+}

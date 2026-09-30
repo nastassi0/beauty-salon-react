@@ -1,0 +1,137 @@
+/* src/pages/StaffPage.css */
+
+.staff-container {
+  padding: 40px;
+  padding-top: 40px; /* Отступ сверху от навигационной панели шапки */
+  font-family: sans-serif;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Стили формы добавления */
+.staff-form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 15px;
+  margin-bottom: 40px;
+}
+
+.staff-form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.staff-form-label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: #333;
+}
+
+.staff-form-input {
+  border: 1px solid #ccc;
+  padding: 8px;
+  border-radius: 4px;
+  outline: none;
+  font-size: 14px;
+  transition: border-color 0.15s ease-in-out;
+}
+
+.staff-form-input:focus {
+  border-color: #dc3545;
+}
+
+/* Фиксированная ширина инпутов для аккуратного выравнивания */
+.w-140 { width: 140px; }
+.w-180 { width: 180px; }
+.w-160 { width: 160px; }
+
+/* Кнопки */
+.staff-add-btn {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  height: 38px;
+  transition: background-color 0.2s ease;
+}
+
+.staff-add-btn:hover {
+  background-color: #bd2130;
+}
+
+.staff-delete-btn {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.staff-delete-btn:hover {
+  background-color: #bd2130;
+}
+
+/* Заголовок страницы */
+.staff-title {
+  font-size: 32px;
+  margin-bottom: 20px;
+  font-weight: normal;
+  color: #222;
+}
+
+/* Стили таблицы */
+.staff-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.staff-table th {
+  padding: 12px 10px;
+  font-weight: bold;
+  color: #444;
+}
+
+.staff-th-id { width: 50px; }
+.staff-th-action { width: 100px; }
+
+.staff-table-thead-tr {
+  border-bottom: 2px solid #eaeaea;
+}
+
+.staff-table-tbody-tr {
+  border-bottom: 1px solid #eee;
+  transition: background-color 0.1s ease;
+}
+
+.staff-table-tbody-tr:hover {
+  background-color: #f1f1f1 !important; /* Легкая подсветка строки при наведении */
+}
+
+.bg-light { background-color: #f9f9f9; }
+.bg-white { background-color: white; }
+
+.staff-table td {
+  padding: 15px 10px;
+}
+
+.staff-td-id {
+  font-weight: bold;
+}
+
+.staff-td-specialization {
+  color: #0070f3;
+  font-weight: 500;
+}
+
+.staff-td-phone {
+  color: #333;
+}
