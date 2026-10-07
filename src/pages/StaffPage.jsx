@@ -78,11 +78,11 @@ export default function StaffPage() {
       {/* Форма добавления */}
       <form onSubmit={handleAddUser} className="staff-form">
         <button type="submit" className="staff-add-btn">
-          Add User
+          Добавить
         </button>
         
         <div className="staff-form-group">
-          <label className="staff-form-label">First Name</label>
+          <label className="staff-form-label">Имя</label>
           <input 
             type="text" 
             required
@@ -93,7 +93,7 @@ export default function StaffPage() {
         </div>
 
         <div className="staff-form-group">
-          <label className="staff-form-label">Second Name</label>
+          <label className="staff-form-label">Фамилия</label>
           <input 
             type="text" 
             required
@@ -104,7 +104,7 @@ export default function StaffPage() {
         </div>
 
         <div className="staff-form-group">
-          <label className="staff-form-label">Specialization</label>
+          <label className="staff-form-label">Специализация</label>
           <input 
             type="text" 
             required
@@ -115,7 +115,7 @@ export default function StaffPage() {
         </div>
 
         <div className="staff-form-group">
-          <label className="staff-form-label">Birth Date</label>
+          <label className="staff-form-label">Дата рождения</label>
           <input 
             type="date" 
             value={formData.birth_date}
@@ -125,7 +125,7 @@ export default function StaffPage() {
         </div>
 
         <div className="staff-form-group">
-          <label className="staff-form-label">Phone Number</label>
+          <label className="staff-form-label">Номер телефона</label>
           <input 
             type="text" 
             placeholder="+375 (29) XXX-XX-XX"
@@ -137,19 +137,19 @@ export default function StaffPage() {
       </form>
 
       {/* Заголовок таблицы */}
-      <h2 className="staff-title">Staff Members</h2>
+      <h2 className="staff-title">Сотрудники</h2>
 
       {/* Таблица */}
       <table className="staff-table">
         <thead>
           <tr className="staff-table-thead-tr">
             <th className="staff-th-id">Id</th>
-            <th>First Name</th>
-            <th>Second Name</th>
-            <th>Specialization</th>
-            <th>Birth Date</th>
-            <th>Phone Number</th>
-            <th className="staff-th-action">Action</th>
+            <th>Имя</th>
+            <th>Фамилия</th>
+            <th>Специализация</th>
+            <th>Дата рождения</th>
+            <th>Номер телефона</th>
+            <th className="staff-th-action">Действие</th>
           </tr>
         </thead>
         <tbody>
@@ -171,7 +171,7 @@ export default function StaffPage() {
                   onClick={() => handleDelete(employee.id)}
                   className="staff-delete-btn"
                 >
-                  Delete
+                  Удалить
                 </button>
               </td>
             </tr>

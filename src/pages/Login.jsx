@@ -70,14 +70,14 @@ export default function LoginPage({ onLoginSuccess }) {
     <div className="login-container">
       <div className="login-card">
         
-        <h1 className="login-title">Welcome</h1>
-        <p className="login-subtitle">Login to get started!</p>
+        <h1 className="login-title">Добро пожаловать</h1>
+        <p className="login-subtitle">Войдите, чтобы начать работу!</p>
 
         <form onSubmit={handleLogin}>
           <div className="login-input-group">
             <input
               type="email"
-              placeholder="Email"
+              placeholder="Электронная почта"
               required
               value={email}
               onChange={(e) => setEmail(e.target.value)}
@@ -88,7 +88,7 @@ export default function LoginPage({ onLoginSuccess }) {
           <div className="login-input-group-large">
             <input
               type="password"
-              placeholder="Password"
+              placeholder="Пароль"
               required
               value={password}
               onChange={(e) => setPassword(e.target.value)}
@@ -102,15 +102,15 @@ export default function LoginPage({ onLoginSuccess }) {
 
           <div className="login-btn-container">
             <button type="submit" className="login-btn">
-              Login
+              Войти
             </button>
           </div>
         </form>
 
         <div className="login-footer">
-          First time here?{' '}
+          Впервые здесь?{' '}
           <Link to="/register" className="login-link" style={{ textDecoration: 'none' }}>
-            Create your account.
+            Создайте аккаунт.
           </Link>
         </div>
 

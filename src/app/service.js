@@ -175,6 +175,50 @@ const server = http.createServer((req, res) => {
     return;
   }
 
+  // ДОБАВЛЕНО: 5. POST /api/register — Регистрация нового аккаунта без staff_id
+  if (req.method === 'POST' && req.url === '/api/register') {
+    let body = '';
+    req.on('data', chunk => { body += chunk.toString(); });
+    req.on('end', () => {
+      try {
+        const { email, password } = JSON.parse(body);
+
+        if (!email || !password) {
+          res.writeHead(400, { 'Content-Type': 'application/json' });
+          res.end(JSON.stringify({ error: 'Email и пароль обязательны' }));
+          return;
+        }
+
+        // Проверяем, не занят ли email
+        const emailExists = BeautySalonAPI.accounts.some(acc => acc.email === email);
+        if (emailExists) {
+          res.writeHead(400, { 'Content-Type': 'application/json' });
+          res.end(JSON.stringify({ error: 'Аккаунт с таким Email уже существует' }));
+          return;
+        }
+
+        // Вычисляем новый ID для аккаунта
+        const maxAccId = BeautySalonAPI.accounts.reduce((max, acc) => acc.id > max ? acc.id : max, 0);
+        
+        const newAccount = {
+          id: maxAccId + 1,
+          email: email,
+          password: password, // В реальном приложении здесь должно быть хеширование
+          staff_id: null      // Так как регистрируется пользователь без привязки к сотруднику
+        };
+
+        BeautySalonAPI.accounts.push(newAccount);
+
+        res.writeHead(201, { 'Content-Type': 'application/json' });
+        res.end(JSON.stringify({ message: 'Аккаунт успешно создан', email: newAccount.email }));
+      } catch (err) {
+        res.writeHead(400, { 'Content-Type': 'application/json' });
+        res.end(JSON.stringify({ error: 'Некорректный JSON запроса' }));
+      }
+    });
+    return;
+  }
+
   if (req.method === 'POST' && req.url === '/api/login') {
     let body = '';
     req.on('data', chunk => { body += chunk.toString(); });

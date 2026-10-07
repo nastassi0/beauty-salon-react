@@ -8,7 +8,6 @@ const REGISTER_API_URL = 'http://localhost:5000/api/register';
 export default function RegisterPage() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [staffId, setStaffId] = useState('');
   const [error, setError] = useState('');
   const [success, setSuccess] = useState('');
   const navigate = useNavigate();
@@ -24,8 +23,7 @@ export default function RegisterPage() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ 
           email, 
-          password, 
-          staff_id: staffId 
+          password 
         })
       });
 
@@ -48,14 +46,14 @@ export default function RegisterPage() {
   return (
     <div className="login-container">
       <div className="login-card">
-        <h1 className="login-title">Register</h1>
-        <p className="login-subtitle">Create an account to get started!</p>
+        <h1 className="login-title">Регистрация</h1>
+        <p className="login-subtitle">Создайте аккаунт, чтобы начать работу!</p>
 
         <form onSubmit={handleRegister}>
           <div className="login-input-group">
             <input
               type="email"
-              placeholder="Email"
+              placeholder="Электронная почта"
               required
               value={email}
               onChange={(e) => setEmail(e.target.value)}
@@ -66,21 +64,10 @@ export default function RegisterPage() {
           <div className="login-input-group">
             <input
               type="password"
-              placeholder="Password"
+              placeholder="Пароль"
               required
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              className="login-input"
-            />
-          </div>
-
-          <div className="login-input-group-large">
-            <input
-              type="number"
-              placeholder="Your Staff ID (e.g. 1, 2)"
-              required
-              value={staffId}
-              onChange={(e) => setStaffId(e.target.value)}
               className="login-input"
             />
           </div>
@@ -90,19 +77,19 @@ export default function RegisterPage() {
 
           <div className="login-btn-container">
             <button type="submit" className="login-btn">
-              Sign Up
+              Зарегистрироваться
             </button>
           </div>
         </form>
 
         <div className="login-footer">
-          Already have an account?{' '}
+          Уже есть аккаунт?{' '}
           <span 
             onClick={() => navigate('/login')} 
             className="login-link" 
             style={{ textDecoration: 'none', fontWeight: 'bold' }}
           >
-            Login
+            Войти
           </span>
         </div>
       </div>
